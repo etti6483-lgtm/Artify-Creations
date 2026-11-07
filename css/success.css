@@ -1,0 +1,101 @@
+/* ==========================================================
+   סקשן הצלחה (Success Section)
+   ================================================---------- */
+.success-section {
+    padding: 80px 20px 100px 20px;
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+
+    .success-card {
+        background-color: #3b2e26;
+        border: 1px solid #d4a373;
+        border-radius: 12px;
+        padding: 50px 35px;
+        box-shadow: 0 12px 35px rgba(74, 59, 50, 0.25);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 0.4s ease;
+
+        &:hover .success-icon-wrap {
+            transform: scale(1.1);
+        }
+
+        .success-icon-wrap {
+            font-size: 55px;
+            color: #d4a373;
+            margin-bottom: 20px;
+            transition: transform 0.4s ease;
+        }
+
+        h1 {
+            font-family: 'Assistant', system-ui, sans-serif;
+            font-size: 36px;
+            font-weight: 800;
+            color: #f2e6ca;
+            margin: 0;
+        }
+
+        .decorative-line {
+            width: 60px;
+            height: 3px;
+            background-color: #d4a373;
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+
+        .success-message {
+            font-size: 17px;
+            line-height: 1.8;
+            color: #e6dfd5;
+            margin: 20px 0 35px 0;
+            max-width: 500px;
+        }
+
+        .action-btn-wrap {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            .home-btn {
+                display: inline-block;
+                background-color: #d4a373;
+                color: #3b2e26;
+                font-size: 16px;
+                font-weight: 700;
+                padding: 13px 32px;
+                border-radius: 6px;
+                text-decoration: none;
+                transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+
+                &:hover {
+                    background-color: #f2e6ca;
+                    transform: translateY(-2px);
+                    box-shadow: 0 6px 15px rgba(212, 163, 115, 0.3);
+                }
+
+                &:active {
+                    transform: translateY(0);
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================================
+   התאמה רספונסיבית למסכים קטנים
+   ================================================---------- */
+@media (max-width: 600px) {
+    .success-section {
+        padding: 40px 15px;
+
+        .success-card {
+            padding: 35px 20px;
+
+            h1 {
+                font-size: 28px;
+            }
+        }
+    }
+}

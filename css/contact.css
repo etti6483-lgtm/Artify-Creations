@@ -1,0 +1,142 @@
+/* ==========================================================
+   סקשן יצירת קשר (Contact Section)
+   ================================================---------- */
+.contact-section {
+    padding: 60px 20px 80px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+
+    .contact-header {
+        text-align: center;
+        margin-bottom: 40px;
+
+        h1 {
+            font-family: 'Assistant', system-ui, sans-serif;
+            font-size: 44px;
+            font-weight: 800;
+            color: #3b2e26;
+            margin: 0;
+        }
+
+        .decorative-line {
+            width: 60px;
+            height: 3px;
+            background-color: #d4a373;
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+
+        p {
+            font-size: 17px;
+            color: #6c584c;
+            margin-top: 10px;
+        }
+    }
+
+    /* מעטפת הטופס הבהירה והיוקרתית */
+    .contact-container {
+        background-color: #ffffff;
+        border: 1px solid #e6ded1;
+        border-radius: 12px;
+        padding: 45px 40px;
+        box-shadow: 0 10px 30px rgba(59, 46, 38, 0.08);
+
+        /* סידור השדות ברשת (Grid) */
+        .contact-form {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+
+            .form-group {
+                display: flex;
+                flex-direction: column;
+                text-align: right;
+
+                &.full-width {
+                    grid-column: span 2;
+                }
+
+                label {
+                    font-size: 15px;
+                    font-weight: 600;
+                    color: #3b2e26;
+                    margin-bottom: 8px;
+                }
+
+                input,
+                textarea {
+                    background-color: #fdfbf7;
+                    border: 1px solid #dcd3c3;
+                    border-radius: 6px;
+                    padding: 12px 16px;
+                    font-size: 15px;
+                    color: #3b2e26;
+                    font-family: inherit;
+                    outline: none;
+                    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+                    &::placeholder {
+                        color: #b5a89e;
+                    }
+
+                    &:focus {
+                        border-color: #d4a373;
+                        box-shadow: 0 0 8px rgba(212, 163, 115, 0.2);
+                        background-color: #ffffff;
+                    }
+                }
+            }
+
+            /* כפתור שליחה מעוצב */
+            .submit-btn {
+                background-color: #3b2e26;
+                color: #f2e6ca;
+                font-size: 17px;
+                font-weight: 700;
+                padding: 14px 30px;
+                border: none;
+                border-radius: 6px;
+                cursor: pointer;
+                width: 100%;
+                margin-top: 10px;
+                transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+
+                &:hover {
+                    background-color: #d4a373;
+                    color: #3b2e26;
+                    transform: translateY(-2px);
+                    box-shadow: 0 6px 15px rgba(212, 163, 115, 0.25);
+                }
+
+                &:active {
+                    transform: translateY(0);
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================================
+   התאמה רספונסיבית למסכים קטנים
+   ================================================---------- */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 40px 15px;
+
+        .contact-header h1 {
+            font-size: 34px;
+        }
+
+        .contact-container {
+            padding: 25px 20px;
+
+            .contact-form {
+                grid-template-columns: 1fr; /* מעבר לטור יחיד במסכים קטנים */
+
+                .form-group.full-width {
+                    grid-column: span 1;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,182 @@
+/* כותרת מותג עליונה */
+.hero-brand-section {
+    padding: 65px 20px 30px 20px;
+    text-align: center;
+
+    .brand-solid-title {
+        font-family: 'Cinzel', serif, Georgia;
+        font-size: 54px;
+        font-weight: 800;
+        letter-spacing: 5px;
+        color: #3b2e26;
+        text-transform: uppercase;
+        text-shadow: 1px 2px 5px rgba(212, 163, 115, 0.3);
+    }
+
+    .decorative-line {
+        width: 60px;
+        height: 4px;
+        background-color: #d4a373;
+        margin: 18px auto 25px auto;
+        border-radius: 2px;
+    }
+
+    .brand-intro-text {
+        max-width: 780px;
+        margin: 0 auto;
+        font-size: 17px;
+        line-height: 1.8;
+        color: #6c584c;
+
+        .highlight-text {
+            font-size: 21px;
+            font-weight: 700;
+            color: #3b2e26;
+        }
+    }
+}
+
+/* אזור "איך זה עובד" */
+.how-it-works-section {
+    padding: 50px 20px 85px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .section-title-wrap {
+        text-align: center;
+        margin-bottom: 50px;
+
+        .section-gold-heading {
+            font-family: 'Cinzel', serif, Georgia;
+            font-size: 40px;
+            font-weight: 800;
+            letter-spacing: 4px;
+            color: #3b2e26;
+        }
+
+        .section-sub-heading {
+            display: block;
+            font-size: 19px;
+            color: #d4a373;
+            font-weight: 700;
+            margin-top: 6px;
+        }
+    }
+}
+
+/* רשת כרטיסי תהליך העבודה (2x2) */
+.process-steps-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    align-items: stretch;
+
+    .process-card {
+        background-color: #3b2e26;
+        border: 1px solid #d4a373;
+        border-radius: 12px;
+        padding: 35px 25px;
+        text-align: center;
+        position: relative;
+        box-shadow: 0 10px 30px rgba(74, 59, 50, 0.2);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+
+        &:hover {
+            transform: translateY(-8px);
+            border-color: #f2e6ca;
+            box-shadow: 0 20px 40px rgba(74, 59, 50, 0.35);
+        }
+
+        .step-badge-wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+
+            .step-badge {
+                width: 44px;
+                height: 44px;
+                background-color: #d4a373;
+                color: #3b2e26;
+                font-size: 17px;
+                font-weight: 800;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 4px 12px rgba(212, 163, 115, 0.4);
+                border: 2px solid #f2e6ca;
+            }
+        }
+
+        h3 {
+            font-size: 21px;
+            color: #f2e6ca;
+            margin: 0 0 12px 0;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #e6dfd5;
+            margin: 0;
+        }
+    }
+}
+
+/* כפתור חזרה צף */
+.scroll-top-btn {
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    background-color: #3b2e26;
+    color: #d4a373;
+    padding: 10px 16px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(59, 46, 38, 0.3);
+    border: 1px solid #d4a373;
+    z-index: 999;
+    transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+
+    &:hover {
+        background-color: #d4a373;
+        color: #3b2e26;
+        transform: translateY(-3px);
+    }
+}
+
+/* רספונסיביות למסכים קטנים */
+@media (max-width: 768px) {
+    .hero-brand-section .brand-solid-title {
+        font-size: 32px;
+        letter-spacing: 2px;
+    }
+
+    .how-it-works-section .section-title-wrap .section-gold-heading {
+        font-size: 28px;
+        letter-spacing: 2px;
+    }
+
+    .process-steps-grid {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+
+    .scroll-top-btn {
+        bottom: 15px;
+        left: 15px;
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+}
